@@ -6,6 +6,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public float moveSpeed = 1.0f;
     public float jumpSpeed = 1.0f;
     public float FlySpeed = 1.0f;
+    public float Timer = 0;
 
     private bool grounded = false;
 	// Use this for initialization
@@ -14,6 +15,16 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+        Timer += Time.deltaTime;
+        if (Timer >= 5)
+        {
+            moveSpeed *= 1.01f;
+            Timer = 0;
+            FlySpeed *= 1.01f;
+            Timer = 0;
+        }
+
+
 
         float moveX = Input.GetAxis("Horizontal");
         Vector2 velocity = GetComponent<Rigidbody2D>().velocity;

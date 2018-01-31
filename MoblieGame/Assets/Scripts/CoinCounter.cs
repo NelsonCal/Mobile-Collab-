@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour {
     public int coins = 0;
-
+    public float Timer = 0;
     public GameObject coinText;
-
+    public GameObject TimerText;
 
     void OnTriggerEnter2D(Collider2D MyCollisionInfo)
     {
@@ -20,7 +20,9 @@ public class CoinCounter : MonoBehaviour {
     }
     void Update()
     {
+        Timer += Time.deltaTime;
         coinText.GetComponent<Text>().text = "Coins: " + coins;
+        TimerText.GetComponent<Text>().text = "Time: " + Timer;
 
 
     }
