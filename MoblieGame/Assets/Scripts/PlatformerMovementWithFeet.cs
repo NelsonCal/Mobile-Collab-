@@ -38,6 +38,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * FlySpeed));
         }
+        if (Input.GetButtonDown("Fire3")) {
+            moveSpeed *= 2f;
+        }
+
     }
     public void Grounded() {
         grounded = true;

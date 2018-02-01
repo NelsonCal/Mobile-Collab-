@@ -14,6 +14,7 @@ public class CoinCounter : MonoBehaviour {
         Debug.Log(MyCollisionInfo.gameObject.name);
         if (MyCollisionInfo.gameObject.tag == "Coin")
         {
+            PlayerPrefs.SetInt("coins", coins);
             Destroy(MyCollisionInfo.gameObject);
             coins += 1;
         }
