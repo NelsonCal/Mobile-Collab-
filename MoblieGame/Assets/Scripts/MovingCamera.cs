@@ -31,7 +31,7 @@ public class MovingCamera : MonoBehaviour {
         {
             MoveSpeed *= 2f;
         }
-        if (Timer >= 126)
+        if (Timer2 >= 126)
         {
             MoveSpeed = 0;
         }
