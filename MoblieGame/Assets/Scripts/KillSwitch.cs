@@ -16,9 +16,50 @@ public class KillSwitch : MonoBehaviour {
 	}
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "wall")
+        if(collision.gameObject.name == "wallTest")
             {
             SceneManager.LoadScene("Test1");
         }
+        if (collision.gameObject.name == "wall1e")
+        {
+            SceneManager.LoadScene("Easy1");
+        }
+        if (collision.gameObject.name == "wall2e")
+        {
+            SceneManager.LoadScene("Easy2");
+        }
+        if (collision.gameObject.name == "wall3e")
+        {
+            SceneManager.LoadScene("Easy3");
+        }
+
+
+        if (collision.gameObject.name == "wall1m")
+        {
+            SceneManager.LoadScene("Med1");
+        }
+        if (collision.gameObject.name == "wall2m")
+        {
+            SceneManager.LoadScene("Med2");
+        }
+        if (collision.gameObject.name == "wall3m")
+        {
+            SceneManager.LoadScene("Med3");
+        }
+
+
+        if (collision.gameObject.name == "wall1h")
+        {
+            SceneManager.LoadScene("Hard1");
+        }
+        if (collision.gameObject.name == "wall2h")
+        {
+            SceneManager.LoadScene("Hard2");
+        }
+        if (collision.gameObject.name == "wall3h")
+        {
+            SceneManager.LoadScene("Hard3");
+        }
+
     }
 }

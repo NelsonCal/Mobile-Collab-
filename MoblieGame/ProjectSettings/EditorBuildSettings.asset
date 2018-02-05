@@ -11,3 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levles/Test1.unity
     guid: 9379cfc68c7b7374e97fd56bb42e207e
+  - enabled: 1
+    path: Assets/Levles/Easy/Easy1.unity
+    guid: c315ad761ac139543988d3e22069929e
+  - enabled: 1
+    path: Assets/Levles/Easy/Easy2.unity
+    guid: d41f4ffe8fe376243a11fee8bd58a5b8
+  - enabled: 1
+    path: Assets/Levles/Easy/Easy3.unity
+    guid: 4260c0187cd96114e8eeaf05b38406d5

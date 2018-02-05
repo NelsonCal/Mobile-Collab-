@@ -34,15 +34,15 @@ public class StartCanv : MonoBehaviour {
 
     public void PlayGame0()
     {
-        SceneManager.LoadScene("Level1Easy");
+        SceneManager.LoadScene("Easy1");
     }
     public void PlayGame1()
     {
-        SceneManager.LoadScene("Level1Medium");
+        SceneManager.LoadScene("Med1");
     }
     public void PlayGame2()
     {
-        SceneManager.LoadScene("Level1Hard");
+        SceneManager.LoadScene("Hard1");
     }
     public void PlayGameTest()
     {
