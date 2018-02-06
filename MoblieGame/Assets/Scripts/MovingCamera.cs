@@ -21,6 +21,7 @@ public class MovingCamera : MonoBehaviour {
         Timer2 += Time.deltaTime;
         Timer += Time.deltaTime;
         transform.Translate(MoveSpeed, 0, 0);
+        PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
         if (Timer >= 5)
         {
             MoveSpeed *= 1.01f;
