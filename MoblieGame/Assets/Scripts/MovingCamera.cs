@@ -12,16 +12,26 @@ public class MovingCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
+    }
  
 	// Update is called once per frame
 	void Update () {
+        
+        if (Time.timeScale > 0 && MoveSpeed == 0)
+        {
+            MoveSpeed = PlayerPrefs.GetFloat("CameraMove");
+        }
+        if (Time.timeScale == 0 && MoveSpeed > 0)
+        {
+            MoveSpeed = 0;
+        }
+        
         TimerText.GetComponent<Text>().text = "Time: " + Timer;
         Timer2 += Time.deltaTime;
         Timer += Time.deltaTime;
         transform.Translate(MoveSpeed, 0, 0);
-        PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
+        //PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
         if (Timer >= 5)
         {
             MoveSpeed *= 1.01f;
@@ -36,6 +46,7 @@ public class MovingCamera : MonoBehaviour {
         {
             MoveSpeed = 0;
         }
+        
        /* if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             Time.timeScale = 0;

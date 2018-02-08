@@ -14,13 +14,13 @@ public class pauseMenu : MonoBehaviour {
 			//assume this script is attached to
 			//pause menu canvas
 			gameObject.GetComponent<Canvas>().enabled = true;
-            Camera.GetComponent<MovingCamera>().MoveSpeed = 0;
+            //Camera.GetComponent<MovingCamera>().MoveSpeed = 0;
 		}
-	}
+    }
 	public void Resume(){
 		Time.timeScale = 1;
 		gameObject.GetComponent<Canvas>().enabled = false;
-        Camera.GetComponent<MovingCamera>().MoveSpeed = PlayerPrefs.GetFloat("CameraMove");
+        //Camera.GetComponent<MovingCamera>().MoveSpeed = PlayerPrefs.GetFloat("CameraMove");
     }
 	public void QuitGame(){
 		//this will quite the .exe app of 
