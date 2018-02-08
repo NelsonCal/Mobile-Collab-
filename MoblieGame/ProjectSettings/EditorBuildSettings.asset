@@ -23,3 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levles/Medium/Med1.unity
     guid: 9d56f0d302c2cc340a8370c609fb1ff4
+  - enabled: 1
+    path: Assets/Levles/Medium/Med2.unity
+    guid: b8ddb334d96c8f84cb5b5e8541e1f8fe
+  - enabled: 1
+    path: Assets/Levles/Medium/Med3.unity
+    guid: 14222e8d79e1837409101181fe2ebf84
+  - enabled: 1
+    path: Assets/Levles/Hard/Hard1.unity
+    guid: b79136fbb8423074cb1aae9881fe2887
+  - enabled: 1
+    path: Assets/Levles/Hard/Hard2.unity
+    guid: 651d424fd521f224f9b7890482afd7cb
+  - enabled: 1
+    path: Assets/Levles/Hard/Hard3.unity
+    guid: a92004aa7ce3cf1428535ff5e6d387fc
