@@ -3,20 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlyingActivate : MonoBehaviour {
-    // Use this for initialization
-    void Start () {
-      //  gameObject.GetComponent<Flying>().enabled = false;
-
-    }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-       // gameObject.GetComponent<Flying>().enabled = true;
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformerMovementWithFeet : MonoBehaviour {
     public float moveSpeed = 1.0f;
@@ -13,8 +14,25 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	void Start () {
  
 	}
-	// Update is called once per frame
-	void Update () {
+
+    public void Reload()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 21)
+        {
+            Reload();
+        }
+
+
+    }
+
+    // Update is called once per frame
+    void Update () {
         Timer += Time.deltaTime;
         if (Timer >= 5)
         {
@@ -24,8 +42,6 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             Timer = 0;
         }
 
-
-
         float moveX = Input.GetAxis("Horizontal");
         Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
         velocity.x = moveX * moveSpeed;
@@ -34,23 +50,25 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
             grounded = false;
         }
+
         if (Input.GetButton("Jump"))
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * FlySpeed));
         }
+
         if (Input.GetButtonDown("Fire3")) {
             moveSpeed *= 2f;
         }
 
     }
+
     public void Grounded() {
         grounded = true;
        // anim.SetBool("isJumping", false);
     }
+
     public void NotGrounded() {
         grounded = false;
-
     }
-
 
 }

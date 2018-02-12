@@ -10,9 +10,6 @@ public class FallTrigger : MonoBehaviour
         if (collision.gameObject.layer == 20)
         {
             transform.parent.GetComponent<FallingObjects>().Gravityy();
-
-
-
         }
     }
 }
