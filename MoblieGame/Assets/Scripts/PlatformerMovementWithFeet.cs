@@ -27,6 +27,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             Reload();
         }
+        if (collision.gameObject.layer == 22)
+        {
+            Reload();
+        }
 
 
     }
