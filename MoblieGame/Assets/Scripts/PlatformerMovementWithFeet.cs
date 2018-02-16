@@ -8,12 +8,13 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public float jumpSpeed = 1.0f;
     public float FlySpeed = 1.0f;
     public float Timer = 0;
-
-    private bool grounded = false;
+    Animator anim;
+    public bool grounded = false;
 	// Use this for initialization
 	void Start () {
- 
-	}
+        anim = GetComponent<Animator>();
+
+    }
 
     public void Reload()
     {
@@ -46,7 +47,22 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             Timer = 0;
         }
 
-        float moveX = Input.GetAxis("Horizontal");
+        float moveX = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("X", moveX);
+        
+        if (grounded == false)
+        {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isFlying", true);
+
+        }
+        else
+        {
+            anim.SetBool("isWalking", true);
+            anim.SetBool("isFlying", false);
+
+        }
+
         Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
         velocity.x = moveX * moveSpeed;
         GetComponent<Rigidbody2D>().velocity = velocity;
@@ -64,11 +80,20 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             moveSpeed *= 2f;
         }
 
-    }
+  /*      float Flying1 = Input.GetAxisRaw("Jump");
+        anim.SetFloat("Fly", Flying1);
+        if (Flying1 == 0 && grounded == false)
+        {
+            anim.SetBool("isFlying", false);
+        }
+        else
+        {
+            anim.SetBool("isFlying", true);
+        } */
+    } 
 
     public void Grounded() {
         grounded = true;
-       // anim.SetBool("isJumping", false);
     }
 
     public void NotGrounded() {

@@ -9,17 +9,35 @@ public class RotateThis : MonoBehaviour {
     public int xRotate = 0;
 	public int yRotate = 0;
     public int zRotate = 0;
-	void Start () {
+    public bool xMove = false;
+    public bool yMove = false;
+    public bool zMove = false;
+    public bool MonsterIsChasing = true;
+
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
         int RotationSpeed = Random.Range(5, 500);
-        zRotate = RotationSpeed;
-        transform.Translate(0.001f * RotationSpeed, 0, 0);
-        transform.Translate(0, 0.001f * RotationSpeed, 0);
-
+        if (zMove == true)
+        {
+            zRotate = RotationSpeed;
+        }
+        if (xMove == true)
+        {
+            transform.Translate(0.001f * RotationSpeed, 0, 0);
+        }
+        if (yMove == true)
+        {
+            transform.Translate(0, 0.001f * RotationSpeed, 0);
+        }
         transform.Rotate (xRotate, yRotate, zRotate * Time.deltaTime);
+        if (MonsterIsChasing == true)
+        {
+            int MonsterChase = Random.Range(5, 15);
+            transform.Rotate(0, 0, MonsterChase);
+        }
     }
 }
