@@ -79,17 +79,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (Input.GetButtonDown("Fire3")) {
             moveSpeed *= 2f;
         }
+        //GetComponent<SpriteRenderer>().sprite = Sprite.Flower;
 
-  /*      float Flying1 = Input.GetAxisRaw("Jump");
-        anim.SetFloat("Fly", Flying1);
-        if (Flying1 == 0 && grounded == false)
-        {
-            anim.SetBool("isFlying", false);
-        }
-        else
-        {
-            anim.SetBool("isFlying", true);
-        } */
     } 
 
     public void Grounded() {

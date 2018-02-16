@@ -30,8 +30,6 @@ GameObject:
   - component: {fileID: 114438150815706936}
   - component: {fileID: 70283144385472196}
   - component: {fileID: 95569195620710022}
-  - component: {fileID: 114402252170709340}
-  - component: {fileID: 114758997804318666}
   m_Layer: 20
   m_Name: Person
   m_TagString: Player
@@ -66,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209246714919368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.940001, y: -61.687347, z: 0}
+  m_LocalPosition: {x: 4.3, y: -62.2, z: 0}
   m_LocalScale: {x: 0.06607871, y: 0.066078685, z: 0}
   m_Children:
   - {fileID: 4791519806658180}
@@ -202,18 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3c31de89772e948ad262d159a2bf41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 0
---- !u!114 &114402252170709340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209246714919368}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d17b09673c68542b2b1d38f1396643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  num: 4
+  timer: 0
+  Colors: 0
 --- !u!114 &114430448022524728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,7 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3c31de89772e948ad262d159a2bf41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 0
+  num: 4
+  timer: 0
+  Colors: 0
 --- !u!114 &114438150815706936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,19 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3c31de89772e948ad262d159a2bf41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 0
---- !u!114 &114758997804318666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209246714919368}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce3c31de89772e948ad262d159a2bf41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Num: 0
+  num: 4
+  timer: 0
+  Colors: 0
 --- !u!114 &114859690044644776
 MonoBehaviour:
   m_ObjectHideFlags: 1
