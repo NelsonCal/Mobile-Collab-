@@ -8,6 +8,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public float jumpSpeed = 1.0f;
     public float FlySpeed = 1.0f;
     public float Timer = 0;
+    public int points = 0;
     Animator anim;
     public bool grounded = false;
 	// Use this for initialization
@@ -46,7 +47,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             FlySpeed *= 1.01f;
             Timer = 0;
         }
-
+        PlayerPrefs.SetInt("Points", points);
+        points = PlayerPrefs.GetInt("Points");
         float moveX = Input.GetAxisRaw("Horizontal");
         anim.SetFloat("X", moveX);
         

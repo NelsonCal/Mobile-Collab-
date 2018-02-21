@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 114438150815706936}
   - component: {fileID: 70283144385472196}
   - component: {fileID: 95569195620710022}
+  - component: {fileID: 114204396951821576}
+  - component: {fileID: 114114366451965354}
   m_Layer: 20
   m_Name: Person
   m_TagString: Player
@@ -157,7 +159,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209246714919368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff701e8b2b93ef74db4d9da0057f0328, type: 3}
   m_Name: 
@@ -203,6 +205,34 @@ MonoBehaviour:
   num: 4
   timer: 0
   Colors: 0
+--- !u!114 &114114366451965354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209246714919368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708d23be70911e645a37fd7cb8ecd5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Android: 1
+--- !u!114 &114204396951821576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209246714919368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0220ecbab9a5c4ab5c10064ca0f19d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpSpeed: 1.25
+  FlySpeed: 1
+  Timer: 0
+  grounded: 0
 --- !u!114 &114430448022524728
 MonoBehaviour:
   m_ObjectHideFlags: 1

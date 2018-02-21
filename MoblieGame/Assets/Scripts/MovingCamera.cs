@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MovingCamera : MonoBehaviour {
     public float MoveSpeed = 1;
     public float Timer = 0;
     public float Timer2 = 0;
 
-    public GameObject TimerText;
 
     // Use this for initialization
     void Start () {
@@ -27,11 +25,10 @@ public class MovingCamera : MonoBehaviour {
             MoveSpeed = 0;
         }
         
-        TimerText.GetComponent<Text>().text = "Time: " + Timer;
         Timer2 += Time.deltaTime;
         Timer += Time.deltaTime;
         transform.Translate(MoveSpeed, 0, 0);
-        //PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
+        /*PlayerPrefs.SetFloat("CameraMove", MoveSpeed);
         if (Timer >= 5)
         {
             MoveSpeed *= 1.01f;
@@ -47,7 +44,7 @@ public class MovingCamera : MonoBehaviour {
             MoveSpeed = 0;
         }
         
-       /* if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             Time.timeScale = 0;
             
