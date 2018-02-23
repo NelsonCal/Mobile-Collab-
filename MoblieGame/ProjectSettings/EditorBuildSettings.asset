@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Levles/Start.unity
-    guid: d5f9faef8a104484e9dcc00cb122b9d4
+    guid: 80fac1d91f693b340a9da1597b696395
   - enabled: 1
     path: Assets/Levles/Test1.unity
     guid: 9379cfc68c7b7374e97fd56bb42e207e
@@ -18,23 +18,14 @@ EditorBuildSettings:
     path: Assets/Levles/Easy/Easy2.unity
     guid: d41f4ffe8fe376243a11fee8bd58a5b8
   - enabled: 1
-    path: Assets/Levles/Easy/Easy3.unity
-    guid: 4260c0187cd96114e8eeaf05b38406d5
-  - enabled: 1
     path: Assets/Levles/Medium/Med1.unity
-    guid: 9d56f0d302c2cc340a8370c609fb1ff4
+    guid: 7d0dce10485f80c4a8bacd09fdbc6710
   - enabled: 1
     path: Assets/Levles/Medium/Med2.unity
-    guid: b8ddb334d96c8f84cb5b5e8541e1f8fe
-  - enabled: 1
-    path: Assets/Levles/Medium/Med3.unity
-    guid: 14222e8d79e1837409101181fe2ebf84
+    guid: ada007114434f324b8d0e66da6839976
   - enabled: 1
     path: Assets/Levles/Hard/Hard1.unity
-    guid: b79136fbb8423074cb1aae9881fe2887
+    guid: d1a9fce5db8c14c49ad1592b07b9242d
   - enabled: 1
     path: Assets/Levles/Hard/Hard2.unity
-    guid: 651d424fd521f224f9b7890482afd7cb
-  - enabled: 1
-    path: Assets/Levles/Hard/Hard3.unity
-    guid: a92004aa7ce3cf1428535ff5e6d387fc
+    guid: 86977ec0099da8d47af7bf2cb23edf8f

@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 222202382877089834}
   - component: {fileID: 114136158279666660}
   - component: {fileID: 114774622985279432}
+  - component: {fileID: 114493466781624856}
   m_Layer: 5
   m_Name: MobileJoystick
   m_TagString: Untagged
@@ -224,6 +225,25 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Jump
+--- !u!114 &114493466781624856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416400191176908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da37de8ab2b17dd47815faee6e5c509e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: 0
+  xRotate: 0
+  yRotate: 0
+  zRotate: 25
+  xMove: 0
+  yMove: 0
+  zMove: 0
+  MonsterIsChasing: 0
 --- !u!114 &114774622985279432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,7 +441,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416400191176908}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.27002048, w: 0.9628546}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

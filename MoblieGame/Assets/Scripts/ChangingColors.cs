@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class ChangingColors : MonoBehaviour
 {
     public int num = 0;
     public float timer = 0.0f;
     public bool Colors = false;
+    public bool Fast = false;
     // Use this for initialization
     void Start()
     {
@@ -16,7 +18,7 @@ public class ChangingColors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Colors == true)
+        if (Colors == true && Fast == false)
         {
             if (timer >= 2)
             {
@@ -24,6 +26,13 @@ public class ChangingColors : MonoBehaviour
                 timer = 0;
             }
         }
+        if (Colors == true && Fast == true)
+        {
+                num = Random.Range(1, 4);
+        }
+
+
+
         timer += Time.deltaTime;
 
         /*   if (timer >= 1 && num >= 0)
